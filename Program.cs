@@ -1,17 +1,20 @@
-﻿Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+﻿/*string[] fraudulentIds = new string[3];
 
-// Your code goes here
-if(daysUntilExpiration <= 10){
-  Console.WriteLine("Your subscription will expire soon. Renew now!");
-}else if (daysUntilExpiration <= 5){
-  Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
-  discountPercentage = 10;
-}else if(daysUntilExpiration <= 1){
-  Console.WriteLine("Your subscription expires within a day!");
-discountPercentage = 20;
-}else if(daysUntilExpiration == 0){
-  Console.WriteLine("Your subscription has expired.");
-}
-else Console.WriteLine(discountPercentage);
+fraudulentIds[0] = "A123";
+
+fraudulentIds[1] = "B456";
+
+fraudulentIds[2] = "C789";*/
+
+string[] fraudulentIds = {"A123", "B456", "C789"};
+
+
+Console.WriteLine($"First: {fraudulentIds[0]}");
+Console.WriteLine($"Second: {fraudulentIds[1]}");
+Console.WriteLine($"Third: {fraudulentIds[2]}");
+
+fraudulentIds[0] = "F00456";
+
+Console.WriteLine($"Reassigned First: {fraudulentIds[0]}");
+
+Console.WriteLine($"There are {fraudulentIds.Length} fraudulent orders");
